@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #Name
+    {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #gender
+    {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #age
+    {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+   #Name::placeholder
+   {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   #gender::placeholder
+   {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+
+   #age::placeholder
+   {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+
+
+</style>
+<body style="background-color: cornflowerblue;">
+    <center><u><i><h1 style="font-family: Comic Sans MS, cursive, sans-serif;">Enter Your Name,Gender & Age</h1></u></i>
+    <form>
+
+        <input style="height: 50px; width: 20%;border-radius: 20px; padding-left: 10px;" type="text" id="Name" placeholder="Enter your value: "><br><br>
+        <p id="validate1" style="font-family: 'Times New Roman', Times, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: red;font-size: small;margin: 0px;"></p>
+        <input style="height: 50px; width: 20%;border-radius: 20px;padding-left: 10px" type="text" id="gender" placeholder="Enter your gender: "><br><br>
+        <p id="validate2" style="font-family: 'Times New Roman', Times, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: red;font-size: small;margin: 0px;"></p>
+        <input style="height: 50px; width: 20%;border-radius: 20px;padding-left: 10px" type="number" id="age" placeholder="Enter your age: "><br><br>
+        <p id="validate3" style="font-family: 'Times New Roman', Times, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: red;font-size: small;margin: 0px;"></p>
+        <input style="border-radius: 20px;background-color: aqua;height: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;width: 100px;" type="button" onclick="values()" value="Click Here!">
+    </form>
+    <p id="demo" style="font-family: 'Times New Roman', Times, serif; color: blue; font-size: 20px;"></p>
+</center>
+</body>
+<script>
+    function values()
+    {
+        var value1 = document.getElementById("Name").value;
+        var value2 = document.getElementById("gender").value;
+        var value3 = document.getElementById("age").value;
+        if(value1 == "")
+        {
+            document.getElementById("validate1").innerHTML="Enter Name";
+           
+        }
+        else if(value2 !== "male" && value2 !== "female")
+        {
+            document.getElementById("validate2").innerHTML="Enter male or female";
+        }
+        else if(value3<=0)
+        {
+            document.getElementById("validate3").innerHTML="Enter age greater than 0";
+        }
+        
+        else if(value1 != "" && value2!= "" && value3!= "" )
+        {
+            document.getElementById("validate1").remove();
+            document.getElementById("validate2").remove();
+            document.getElementById("validate3").remove();
+            document.getElementById("demo").innerHTML="Hello "+value1+"";
+        }
+        
+        else{
+            document.getElementById("demo").innerHTML="Enter all values";
+        }
+       
+    }
+</script>
+</html>

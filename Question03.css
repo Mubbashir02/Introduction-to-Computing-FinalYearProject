@@ -1,0 +1,47 @@
+body{
+    margin: 0px;
+    background-image: url("https://images.theconversation.com/files/323865/original/file-20200330-146699-1526z4d.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1000&fit=clip");
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
+
+  }
+h1 {
+  color: darkmagenta;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+h2{
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+}
+	
+table, th, td {
+  border: 5px solid black;
+  border-collapse: collapse;
+}
+
+
+p {
+  padding: 15px;
+  font-family:monospace;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+img {
+	padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+.Heading
+{
+  font-size: 60px;
+
+}
+a
+{
+    color: white;
+
+}
